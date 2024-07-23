@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Validators, FormGroup, FormBuilder} from "@angular/forms";
 import {Router} from "@angular/router";
-// import { LoginObject } from "../core/models/login-object.model";
+//import { LoginObject } from "./login-object/login-object.model";
 // import {Session} from "../core/models/session.model";
 // import { AuthService } from "../core/services/auth.service";
 @Component({
