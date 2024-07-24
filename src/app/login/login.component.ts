@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   public error: {code: number, message: string} | null = null;
 
   constructor(private formBuilder: FormBuilder,
-              private authService: AuthService,
+             // private authService: AuthService,
               private router: Router) { }
 
   get username() {
@@ -37,16 +37,16 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     this.error = null;
     if(this.loginForm.valid){
-      this.authService.login(new LoginObject(this.loginForm.value)).subscribe(
-        data => this.correctLogin(data),
-        error => {
-          this.error = error;
-        }
-      )
+    //  this.authService.login(new LoginObject(this.loginForm.value)).subscribe(
+    //    data => this.correctLogin(data),
+      //   error => {
+      //     this.error = error;
+      //   }
+      // )
     }
   }
 
-  private correctLogin(data: Session){
+  private correctLogin(){
     this.router.navigate(['/home']);
   }
 }
